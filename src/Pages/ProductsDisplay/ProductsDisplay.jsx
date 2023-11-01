@@ -1,9 +1,22 @@
-import { useLoaderData } from "react-router-dom";
+
 import SingleProductCard from "./SingleProductCard";
 import ad from '../../assets/Advertisements/delicious-food-arrangement-flat-lay.jpg'
+import { useQuery } from "@tanstack/react-query";
 
 const ProductsDisplay = () => {
-    const products = useLoaderData();
+
+    const { isPending, error, data } = useQuery({
+        queryKey: ['allProducts'],
+        queryFn: () =>
+          fetch('http://localhost:5000/products').then(
+            (res) => res.json(),
+          ),
+      })
+    
+      if (isPending) return 'Loading...'
+    
+      if (error) return 'An error has occurred: ' + error.message
+    
     return (
         <div>
             <div>
@@ -24,7 +37,7 @@ const ProductsDisplay = () => {
                 </div>
             </div>
             <div className="grid grid-cols-4 gap-2">
-                {products.map(product => <SingleProductCard
+                {data.map(product => <SingleProductCard
                     key={product._id}
                     product={product}
                 ></SingleProductCard>)}

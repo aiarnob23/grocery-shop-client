@@ -3,6 +3,7 @@ import Root from '../Root/Root'
 import { createBrowserRouter } from "react-router-dom";
 import Home from '../Pages/Home/Home'
 import ProductsDisplay from '../Pages/ProductsDisplay/ProductsDisplay';
+import ProductsByCategory from '../Pages/ProductsByCategory/ProductsByCategory';
 
 const router = createBrowserRouter([
     {
@@ -14,9 +15,12 @@ const router = createBrowserRouter([
           element:<Home></Home>,
         },
         {
+          path:'/ProductsByCategory',
+          element:<ProductsByCategory></ProductsByCategory>,
+        },
+        {
           path:'/productsDisplay',
           element:<ProductsDisplay></ProductsDisplay>,
-          loader:()=>fetch('http://localhost:5000/products')
         },
        
       ]
