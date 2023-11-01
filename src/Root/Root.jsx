@@ -1,7 +1,7 @@
 import TopNav from "../Shared/Navbar/TopNav";
 import Sidenav from "../Shared/Navbar/SideNav";
 import { Outlet } from "react-router-dom";
-
+import Footer from "../Shared/Footer/Footer"
 
 const Root = () => {
     return (
@@ -17,6 +17,7 @@ const Root = () => {
             <Outlet></Outlet>
             </div>
            </div>
+           <Footer></Footer>
         </div>
     );
 };

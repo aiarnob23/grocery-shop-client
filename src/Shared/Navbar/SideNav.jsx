@@ -4,7 +4,7 @@ import "./Nav.css"
 const Navbar = () => {
     const navLinks = <>
     <li><NavLink to='/'>Home</NavLink></li>
-    <li><NavLink to='/categories'>Categories</NavLink></li>
+    <li><NavLink to='/productsDisplay'>All Products</NavLink></li>
     <li><NavLink to='/vegetables'>Vegetables</NavLink></li>
     <li><NavLink to='/freezer'>Freezer</NavLink></li>
     <li><NavLink to='/meatFish'>Meat and Fish</NavLink></li>
@@ -14,9 +14,9 @@ const Navbar = () => {
     <li><NavLink to='/dairy'>Dairy</NavLink></li>
     </>
     return (
-        <div id="sidebar" className="bg-base-300  h-full relative">
-            <nav className="fixed">
-                <ul className="space-y-5 pt-8 px-4">
+        <div id="sidebar" className="h-full min-h-screen relative">
+            <nav className="">
+                <ul className="space-y-5 pt-2 px-4">
                     {navLinks}
                 </ul>
             </nav>
