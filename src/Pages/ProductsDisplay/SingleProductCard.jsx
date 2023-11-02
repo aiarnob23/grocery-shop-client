@@ -8,7 +8,7 @@ const SingleProductCard = ({product}) => {
         <div>
             <div className="card bg-base-100 shadow-xl">
   <figure className="px-10 pt-10">
-    <img src={image}  className="rounded-xl" />
+    <img src={image}  className="rounded-xl h-[300px] w-[300px]" />
   </figure>
   <div className="card-body items-center text-center">
     <h2 className="card-title">{itemName}</h2>

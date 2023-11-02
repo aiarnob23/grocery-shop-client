@@ -3,7 +3,7 @@ import logo from '../../assets/logo.jpg';
 
 const TopNav = () => {
     return (
-        <nav className='flex items-center justify-between px-4 py-5 bg-slate-300'>
+        <nav className='flex items-center justify-between px-1 py-5 bg-slate-300'>
             <div className='flex items-center gap-1'>
                 <div><img className='h-10 rounded-lg' src={logo} alt="" /></div>
                 <div className='text-green-600 font-bold text-xl'>Air Grocery</div>

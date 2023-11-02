@@ -1,6 +1,7 @@
 
 import axios from "axios";
 import { useState } from "react";
+import SingleProductCard from "../ProductsDisplay/SingleProductCard";
 
 
 const ProductsByCategory = () => {
@@ -20,9 +21,14 @@ const ProductsByCategory = () => {
                     type="text" />
                     <button onClick={handleSearch} className='rounded-lg hover:text-2xl text-xl text-slate-600'>Search</button>
             </div>
-            <div>
+            <div className="grid grid-cols-3 gap-3 mt-10">
                 {
-                   (data.length!=0) && <div>ache</div>
+                   (data.length!=0) && (
+                    data.map(product=><SingleProductCard
+                    key={product._id}
+                    product={product}
+                    ></SingleProductCard>)
+                   )
                 }
             </div>
         </div>

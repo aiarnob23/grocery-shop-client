@@ -20,7 +20,7 @@ const ProductsDisplay = () => {
     return (
         <div>
             <div>
-                <div className="hero  bg-base-200">
+                <div className="hero mb-10 bg-base-200">
                     <div className="hero-content flex-col lg:flex-row">
                        <div className="relative">
                        <img src={ad} className="rounded-lg shadow-2xl" />
