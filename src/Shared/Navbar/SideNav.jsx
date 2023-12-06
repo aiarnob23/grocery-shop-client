@@ -5,14 +5,11 @@ const Navbar = () => {
     const navLinks = <>
     <li><NavLink to='/'>Home</NavLink></li>
     <li><NavLink to='/productsDisplay'>All Products</NavLink></li>
-    <li><NavLink to='/ProductsByCategory'>Search Products</NavLink></li>
-    <li><NavLink to='/vegetables'>Vegetables</NavLink></li>
-    <li><NavLink to='/freezer'>Freezer</NavLink></li>
-    <li><NavLink to='/meatFish'>Meat and Fish</NavLink></li>
-    <li><NavLink to='/cookingEssentials'>Cooking Essentials</NavLink></li>
-    <li><NavLink to='/snacksAndInstantFood'>Snacks and Instant foods</NavLink></li>
-    <li><NavLink to='/bevarages'>Bevarages</NavLink></li>
-    <li><NavLink to='/dairy'>Dairy</NavLink></li>
+    <li><NavLink to='/ProductsByCategory'>Search category</NavLink></li>
+    <li>Login</li>
+    <li>Register</li>
+    <li>My Cart</li>
+    <li>Weekly offers</li>
     </>
     return (
         <div id="sidebar" className="h-full min-h-screen relative">
