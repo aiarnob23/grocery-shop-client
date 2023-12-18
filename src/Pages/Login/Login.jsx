@@ -2,8 +2,11 @@ import { Button } from "@mui/material";
 
 import { useContext, useState } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const Login = () => {
+  const location=useLocation();
+  const navigate=useNavigate();
   const { Glogin, eLogin } = useContext(AuthContext);
   const [logInError, setLogInError] = useState('');
 
@@ -14,7 +17,10 @@ const Login = () => {
     const email = form.email.value;
     const password = form.password.value;
     eLogin(email, password)
-      .then((result) => console.log(result))
+      .then((result) => {
+        console.log(result)
+        navigate(location.state? location.state : '/');
+      })
       .catch((error) => {
         setLogInError(error.message);
       })
@@ -27,6 +33,7 @@ const Login = () => {
     Glogin()
       .then(result => {
         console.log(result)
+        navigate(location?.state ? location.state : '/');
       })
       .catch(error => {
         setLogInError(error.message);

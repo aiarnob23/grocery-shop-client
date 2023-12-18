@@ -1,9 +1,42 @@
 import { Button } from "@mui/material";
 import PropTypes from 'prop-types'; 
+import { useContext } from "react";
+import { AuthContext } from "../../AuthProvider/AuthProvider";
+import Swal from "sweetalert2";
+
 
 
 const SingleProductCard = ({product}) => {
-    const {itemName,price,image,quantity}=product;
+  const {itemName,price,image,quantity}=product;
+  const {user} = useContext(AuthContext);
+  console.log(user?.email+"paisi");
+    const addToCart = () =>{
+      const email = user?.email;
+      const cartsNewProduct = {
+        itemName,price,image,email,
+      };
+    
+      fetch('http://localhost:5000/cart',{
+        method:'POST',
+        headers:{
+          "Content-Type":"application/json",
+        },
+          body:JSON.stringify(cartsNewProduct),
+      }
+      ) 
+      .then(res=>res.json())
+      .then(data=>{
+        if(data.insertedId){
+          Swal.fire({
+            title: 'Success!',
+            text: 'Added to Cart',
+            icon: 'success',
+            confirmButtonText: 'Okay'
+          })
+        }
+      })
+    }
+    
     return (
         <div>
             <div className="card bg-base-100 shadow-xl">
@@ -15,7 +48,7 @@ const SingleProductCard = ({product}) => {
     <p>Price: ${price}</p>
     <p>Quantity: {quantity}</p>
     <div className="card-actions">
-      <Button variant="outlined" color="success" className="btn btn-primary">Add to cart</Button>
+      <Button onClick={addToCart} variant="outlined" color="success" className="btn btn-primary">Add to cart</Button>
     </div>
   </div>
 </div>
