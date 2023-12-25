@@ -6,11 +6,20 @@ import Swal from "sweetalert2";
 
 
 
+
 const SingleProductCard = ({product}) => {
   const {itemName,price,image,quantity}=product;
   const {user} = useContext(AuthContext);
   console.log(user?.email+"paisi");
     const addToCart = () =>{
+     if(!user){
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Log in first!",
+      });
+     }
+     else{
       const email = user?.email;
       const cartsNewProduct = {
         itemName,price,image,email,
@@ -35,6 +44,7 @@ const SingleProductCard = ({product}) => {
           })
         }
       })
+     }
     }
     
     return (
