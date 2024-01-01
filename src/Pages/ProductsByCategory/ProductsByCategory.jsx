@@ -6,11 +6,31 @@ import SingleProductCard from "../ProductsDisplay/SingleProductCard";
 
 const ProductsByCategory = () => {
     const [data,setData] = useState([]);
-    const handleSearch = () =>{
-        const searchCategory = document.getElementById('inputField').value;
-              axios.get(`http://localhost:5000/products?category=${searchCategory}`)
-              .then(result=>setData(result.data))  
-    }
+
+ const handleSearch=()=>{
+    const category = document.getElementById('inputField').value;
+    const mappedCategory = standardizeCategory(category);
+    axios.get(`http://localhost:5000/products?category=${mappedCategory}`)
+              .then(result=>setData(result.data))
+ }
+ const standardizeCategory=(temp)=>{
+    return catMap[temp.toLowerCase()] || temp;
+ }
+
+ const catMap ={
+    "fruit": "Fruits",
+    "apple": "Fruits",
+    "banana": "Fruits",
+    "strawberry": "Fruits",
+    "beverage": "Beverages",
+    "milk": "Dairy",
+    "dairy": "Dairy",
+    "egg": "Eggs",
+    "meat":"Chicken",
+    "beef":"Meat",
+
+ }
+
     return (
         <div>
              <div className='flex items-center gap-2 '>

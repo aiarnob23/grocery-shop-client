@@ -3,6 +3,7 @@ import banner1 from '../../../assets/Banner/banner1.jpg';
 import banner2 from '../../../assets/Banner/banner2.jpg';
 import banner3 from '../../../assets/Banner/banner3.jpg';
 import banner4 from '../../../assets/Banner/banner4.jpg';
+import { Link } from 'react-router-dom';
 
 const Banner = () => {
     return (
@@ -14,8 +15,8 @@ const Banner = () => {
   <div className="hero-content text-center text-neutral-content">
     <div className="max-w-md">
       <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
-      <p className="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-      <Button variant="contained">Explore</Button>
+      <p className="mb-5">Life is like waiting in line at the grocery store. You wait, you slowly move forward, you pay the price, then you exit unsatisfied and broke.</p>
+      <Link to='/productsDisplay'><Button variant="contained">Explore</Button></Link>
     </div>
   </div>
 </div>
@@ -30,8 +31,8 @@ const Banner = () => {
   <div className="hero-content text-center text-neutral-content">
     <div className="max-w-md">
       <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
-      <p className="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-      <Button variant="contained">Explore</Button>
+      <p className="mb-5">Life is like waiting in line at the grocery store. You wait, you slowly move forward, you pay the price, then you exit unsatisfied and broke.</p>
+      <Link to='/productsDisplay'><Button variant="contained">Explore</Button></Link>
     </div>
   </div>
 </div>
@@ -46,8 +47,8 @@ const Banner = () => {
   <div className="hero-content text-center text-neutral-content">
     <div className="max-w-md">
       <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
-      <p className="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-      <Button variant="contained">Explore</Button>
+      <p className="mb-5">Life is like waiting in line at the grocery store. You wait, you slowly move forward, you pay the price, then you exit unsatisfied and broke.</p>
+      <Link to='/productsDisplay'><Button variant="contained">Explore</Button></Link>
     </div>
   </div>
 </div>
@@ -62,8 +63,8 @@ const Banner = () => {
   <div className="hero-content text-center text-neutral-content">
     <div className="max-w-md">
       <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
-      <p className="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-      <Button variant="contained">Explore</Button>
+      <p className="mb-5">Life is like waiting in line at the grocery store. You wait, you slowly move forward, you pay the price, then you exit unsatisfied and broke.</p>
+      <Link to='/productsDisplay'><Button variant="contained">Explore</Button></Link>
     </div>
   </div>
 </div>

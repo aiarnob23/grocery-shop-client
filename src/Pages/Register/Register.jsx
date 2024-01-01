@@ -2,7 +2,11 @@ import { Button } from "@mui/material";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import Swal from 'sweetalert2';
+import { updateProfile } from "firebase/auth";
+import auth from "../../Firebase/firebase.config";
+import { useNavigate } from "react-router-dom";
 const Register = () => {
+    const navigate = useNavigate();
     const { eRegister, Glogin } = useContext(AuthContext);
     const  [regError,setRegError] = useState('');
     const handleRegister = e => {
@@ -27,12 +31,22 @@ const Register = () => {
         setRegError('');
         eRegister(email,password)
         .then(()=>{
+            updateProfile(auth.currentUser,{
+                displayName:name,
+            })
+            .then(()=>{
+                window.location.reload();
+            })
+            .catch((error)=>{
+                console.log(error);
+            })
             Swal.fire({
                 title: 'Success!',
                 text: 'Registration is successful',
                 icon: 'success',
                 confirmButtonText: 'Okay'              
               })
+              navigate('/');
         })
         .catch(error=>{
              setRegError(error.message);

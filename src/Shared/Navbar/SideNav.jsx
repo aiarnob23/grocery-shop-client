@@ -9,7 +9,6 @@ const Navbar = () => {
     <li><NavLink to='/login'>Login</NavLink></li>
     <li><NavLink to='/Register'>Register</NavLink></li>
     <li><NavLink to='/Cart'>My Cart</NavLink></li>
-    <li>Weekly offers</li>
     </>
     return (
         <div id="sidebar" className="h-full min-h-screen relative">

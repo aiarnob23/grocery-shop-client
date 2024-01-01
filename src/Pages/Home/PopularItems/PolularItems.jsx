@@ -7,6 +7,7 @@ import pop3 from '../../../assets/Popular/popular5.jpg'
 import pop4 from '../../../assets/Popular/popular6.jpg'
 import pop5 from '../../../assets/Popular/popular7.jpg'
 import { Button } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const PolularItems = () => {
 
@@ -24,9 +25,9 @@ const PolularItems = () => {
                     <figure><img className="h-[300px] w-[300px] rounded-lg" src={pop1} /></figure>
                     <div className="card-body">
                         <div className="card-actions ">
-                            <Button variant="contained" color="success">
+                            <Link to='/productsDisplay'><Button variant="contained" color="success">
                                 Explore
-                            </Button>
+                            </Button></Link>
                         </div>
                     </div>
                 </div>
@@ -34,9 +35,9 @@ const PolularItems = () => {
                     <figure><img className="h-[300px] w-[300px] rounded-lg" src={pop2} /></figure>
                     <div className="card-body">
                         <div className="card-actions ">
-                            <Button variant="contained" color="success">
+                        <Link to='/productsDisplay'><Button variant="contained" color="success">
                                 Explore
-                            </Button>
+                            </Button></Link>
                         </div>
                     </div>
                 </div>
@@ -44,9 +45,9 @@ const PolularItems = () => {
                     <figure><img className="h-[300px] w-[300px] rounded-lg" src={pop3} /></figure>
                     <div className="card-body">
                         <div className="card-actions ">
-                            <Button variant="contained" color="success">
+                        <Link to='/productsDisplay'><Button variant="contained" color="success">
                                 Explore
-                            </Button>
+                            </Button></Link>
                         </div>
                     </div>
                 </div>
@@ -54,9 +55,9 @@ const PolularItems = () => {
                     <figure><img className="h-[300px] w-[300px] rounded-lg" src={pop4} /></figure>
                     <div className="card-body">
                         <div className="card-actions ">
-                            <Button variant="contained" color="success">
+                        <Link to='/productsDisplay'><Button variant="contained" color="success">
                                 Explore
-                            </Button>
+                            </Button></Link>
                         </div>
                     </div>
                 </div>
@@ -64,9 +65,9 @@ const PolularItems = () => {
                     <figure><img className="h-[300px] w-[300px] rounded-lg" src={pop5} /></figure>
                     <div className="card-body">
                         <div className="card-actions ">
-                            <Button variant="contained" color="success">
+                        <Link to='/productsDisplay'><Button variant="contained" color="success">
                                 Explore
-                            </Button>
+                            </Button></Link>
                         </div>
                     </div>
                 </div>
