@@ -10,7 +10,7 @@ const Cart = () => {
   const { isPending, error, data } = useQuery({
     queryKey: ['CartProducts'],
     queryFn: () =>
-      fetch(`http://localhost:5000/cart?email=${email}`).then(
+      fetch(`https://grocery-shop-server-xi.vercel.app/cart?email=${email}`).then(
         (res) => res.json(),
       ),
   })

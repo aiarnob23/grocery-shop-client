@@ -8,7 +8,7 @@ const ProductsDisplay = () => {
     const { isPending, error, data } = useQuery({
         queryKey: ['allProducts'],
         queryFn: () =>
-          fetch('http://localhost:5000/products').then(
+          fetch('https://grocery-shop-server-xi.vercel.app/products').then(
             (res) => res.json(),
           ),
       })

@@ -25,7 +25,7 @@ const SingleProductCard = ({product}) => {
         itemName,price,image,email,
       };
     
-      fetch('http://localhost:5000/cart',{
+      fetch('https://grocery-shop-server-xi.vercel.app/cart',{
         method:'POST',
         headers:{
           "Content-Type":"application/json",

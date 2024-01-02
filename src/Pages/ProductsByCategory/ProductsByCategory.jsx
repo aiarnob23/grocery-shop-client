@@ -10,7 +10,7 @@ const ProductsByCategory = () => {
  const handleSearch=()=>{
     const category = document.getElementById('inputField').value;
     const mappedCategory = standardizeCategory(category);
-    axios.get(`http://localhost:5000/products?category=${mappedCategory}`)
+    axios.get(`https://grocery-shop-server-xi.vercel.app/products?category=${mappedCategory}`)
               .then(result=>setData(result.data))
  }
  const standardizeCategory=(temp)=>{
@@ -19,6 +19,7 @@ const ProductsByCategory = () => {
 
  const catMap ={
     "fruit": "Fruits",
+    "fruits": "Fruits",
     "apple": "Fruits",
     "banana": "Fruits",
     "strawberry": "Fruits",
